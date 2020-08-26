@@ -111,7 +111,8 @@ body:not(.landing) {
 }
 
 #content-wrapper {
-  width: 100%;
+    margin: 32px;
+    width: 100%;
 }
 
 .logo {
@@ -187,6 +188,7 @@ body:not(.landing) {
     }
 
 
+/* Sidebar */
 #sidebar {
     overflow-y: auto;
     -webkit-transition: all 0.5s ease;
@@ -194,6 +196,7 @@ body:not(.landing) {
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
 }
+
 #sidebar .sidebar-header a {
     display: block;
     text-decoration: none;
@@ -201,10 +204,12 @@ body:not(.landing) {
     letter-spacing: 3px;
     padding: 5px 0px;
 }
+
 #sidebar .sidebar-header {
     padding: 8px 16px;
     text-align: center;
 }
+
 #sidebar ul li a {
     padding: 15px 10px;
     font-size: 17px;
@@ -213,17 +218,21 @@ body:not(.landing) {
     text-decoration: none;
     transition: 0.4s;
 }
+
 #sidebar ul li a:hover {
     color: #eee;
     background: #37C1F0;
 }
+
 #sidebar ul li a:hover .icon {
     color: #ddd;
 }
+
 #sidebar ul ul a {
     font-size: 16px !important;
     padding-left: 60px !important;
 }
+
 a.dropdown-toggle.collapsed.dropdown-toggle::after {
     display: inline-block;
     width: 0;
@@ -237,14 +246,36 @@ a.dropdown-toggle.collapsed.dropdown-toggle::after {
     float: right;
     margin-top: 10px;
 }
+
 #sidebar .dropdown-toggle::after {
     float: right;
     margin-top: 10px;
 }
+
 #sidebar .icon {
     color: #888;
     padding-right: 15px;
 }
+
+#sidebar .icon i {
+    font-size: 125%;
+    width: 20px;
+    text-align: center;
+}
+
+/* Toolbars */
+.btn-toolbar {
+    margin-bottom: 24px;
+    margin-top: 24px;
+}
+
+    /* Button groups */
+    .btn-toolbar .btn-group { margin-left: 8px; }
+    .btn-toolbar .btn-group:first-child { margin-left: 0; }
+
+    /* Input groups */
+    .btn-toolbar .input-group { margin-left: 8px; }
+    .btn-toolbar .input-group:first-child { margin-left: 0; }
 
 
 /* Widths
