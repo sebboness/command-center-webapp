@@ -263,10 +263,20 @@ a.dropdown-toggle.collapsed.dropdown-toggle::after {
     text-align: center;
 }
 
+/* Table actions */
+.table-actions {
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+/* Table filters */
+.table-filters {
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
 /* Toolbars */
 .btn-toolbar {
-    margin-bottom: 24px;
-    margin-top: 24px;
 }
 
     /* Button groups */
