@@ -110,7 +110,7 @@ ul.flat > li { background: none; margin: 0; padding: 0; }
         position: absolute;
         overflow: hidden;
         z-index: -10;
-        color: #2e2e2e;
+        color: rgba(255,255,255,.05);
         top: 0;
         left: 0;
         right: 0;
@@ -128,7 +128,7 @@ ul.flat > li { background: none; margin: 0; padding: 0; }
     /* Tool tile */
     .tool-tile {
         /* background-image: linear-gradient(to bottom right, #444444, #363636); */
-        background-image: linear-gradient(to bottom right, rgba(0,0,0,0.1), rgba(0,0,0,0.275));
+        /* background-image: linear-gradient(to bottom right, rgba(0,0,0,0.1), rgba(0,0,0,0.275)); */
         border-radius: 4px;
         box-shadow: 4px 4px 12px rgba(0,0,0,0.2);
         display: block;
@@ -162,4 +162,112 @@ ul.flat > li { background: none; margin: 0; padding: 0; }
 
 @media screen and (max-width: 500px) {
     
+}
+
+
+/* CSS used for the landing page is below 
+Not using the CSS above (nor the bootstrap CSS) but I didn't delete it just in case 
+- Jerome
+======================================================================*/
+body {
+    background-color: #202124;
+}
+
+.landing-body{
+    height: 100vh;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#landing-logo img {
+    display: block;
+    height: 8rem;
+    margin: 5rem auto;
+}
+
+.cards-wrapper{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    width: 50%;
+}
+.card-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    background-color: #353535; 
+    width: 20rem;
+    height: 10rem;
+    border-radius: .25rem;
+    padding: 1rem;
+    box-shadow: rgba(0,0,0,0.15) 0px 2px 8px;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    margin-right: 2rem;
+    margin-bottom: 2rem
+}
+
+.card-container:hover{
+    background-color: rgba(0,0,0,.25);
+}
+
+.card-container p {
+    color: rgba(255,255,255,.80);
+}
+
+.card-bg-image {
+    position: absolute;
+    left: 8rem;
+    top: 1.5rem;
+    width: 60%;
+    height: auto;
+    opacity: .033;
+}
+
+#mds h2 {
+    color: #4ab848;
+}
+
+#core-data h2 {
+    color: #fcae16;
+}
+
+#git h2 {
+    color: #37c1f0;
+}
+
+#settings h2 {
+    color: #e7e514;
+}
+
+.button-cta {
+    width: 10rem;
+    height: 2rem;
+    border-radius: .25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #37C1F0;
+    color: black;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    text-align: center;
+}
+
+.button-cta p {
+    margin-bottom: 0;
+}
+
+.button-cta img {
+    margin-top: -.50rem;
 }

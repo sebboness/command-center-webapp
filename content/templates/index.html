@@ -25,78 +25,73 @@
     <script src="/scripts/responsive.min.js" type="text/javascript"></script>
     <script src="/scripts/responsive-menu.js" type="text/javascript"></script>
 </head>
-<body class="landing dark">
+<body>
+    <main class="landing-body">
 
-<main class="main">
-    
-    <!-- Hero Section-->
-    <section class="container">
         <div id="landing-logo">
             <a href="#">
                 <img src="/content/images/logo.svg" />
             </a>
         </div>
-
-        <div class="tools">
-            <div class="row">
-                <div class="col">
-                    <a class="tool-tile" href="#">
-                        <div class="tile-bg">
-                            <p><i class="fal fa-id-card"></i></p>
-                        </div>
-                        <h2>MDS Manager</h2>
-                        <p class="text-muted">
-                            Manage datasets, source new images, etc.
-                        </p>
-                    </a>
-                </div>
-                
-                <div class="col">
-                    <a class="tool-tile" href="#">
-                        <div class="tile-bg">
-                            <p><i class="fal fa-clipboard-list-check"></i></p>
-                        </div>
-                        <h2>CoreData Validator</h2>
-                        <p class="text-muted">
-                            Validate your local CoreData repo
-                        </p>
-                    </a>
-                </div>
-
-                <div class="w-100"></div>
-                
-                <div class="col">
-                    <a class="tool-tile" href="#">
-                        <div class="tile-bg">
-                            <p><i class="fab fa-github"></i></p>
-                        </div>
-                        <h2>Git branch management</h2>
-                        <p class="text-muted">
-                            Create and merge branches, create PRs, etc.
-                        </p>
-                    </a>
-                </div>
-                
-                <div class="col">
-                    <a class="tool-tile" href="#">
-                        <div class="tile-bg">
-                            <p><i class="far fa-cog"></i></p>
-                        </div>
-                        <h2>Settings</h2>
-                        <p class="text-muted">
-                            Setup CoreData, IMS credentials, etc.
-                        </p>
-                    </a>
-                </div>
+        
+        <div class="cards-wrapper">
+            <div class="card-container" id="mds">
+                <a href="#">
+                    <div>
+                        <img class="card-bg-image" src="/content/images/icon-mds.svg" />
+                        <!-- <p><i class="far fa-cog"></i></p> -->
+                    </div>
+                    <h2>MDS Manager</h2>
+                    <p>
+                        Manage datasets, source new images, etc.
+                    </p>
+                </a>
             </div>
+            
+            <div class="card-container" id="core-data">
+                <a href="#">
+                    <div>
+                        <img class="card-bg-image" src="/content/images/icon-validate.svg" />
+                        <!-- <p><i class="far fa-cog"></i></p> -->
+                    </div>
+                    <h2>Core Data Validator</h2>
+                    <p>
+                        Validate your local CoreData repo
+                    </p>
+                </a>
+            </div>
+            
+            <div class="card-container" id="git">
+                <a href="#">
+                    <div>
+                        <img class="card-bg-image" src="/content/images/icon-git.png" />
+                        <!-- <p><i class="far fa-cog"></i></p> -->
+                    </div>
+                    <h2>Git branch management</h2>
+                    <p>
+                        Create and merge braches, create PRs, etc.
+                    </p>
+                </a>
+            </div>
+            
+            <div class="card-container" id="settings">
+                <a href="#">
+                    <div>
+                        <img class="card-bg-image" src="/content/images/icon-settings.svg" />
+                        <!-- <p><i class="far fa-cog"></i></p> -->
+                    </div>
+                    <h2>Settings</h2>
+                    <p>
+                        Setup CoreData, IMS credentials, etc.
+                    </p>
+                </a>
+            </div>
+        </div>  
+        
+        <div>
+            <a href="#" class="button-cta"><p>More tools</p> <img src="/content/images/icon-arrow-down.svg" /></a>
         </div>
-
-        <div class="tools-more">
-            <a class="btn btn-primary btn-lg btn-block" href="#">More tools <i class="fas fa-chevron-down"></i></a>
-        </div>
-    </section>
-
-</main>
-
+    </main>
+            
 </body>
 </html>
