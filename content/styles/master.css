@@ -1,0 +1,165 @@
+/*------------------------+
+ | Master styles          |
+ +------------------------*/
+
+/* Imports
+=====================================================================*/
+@import url(//fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap);
+@import url(/content/styles/fontawesome.css);
+@import url(/content/styles/reset.css);
+/* @import url(//stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css); */
+@import url(/content/styles/bootstrap.css);
+@import url(/content/styles/forms.css);
+
+
+/* Fonts
+======================================================================*/
+body, input, select, textarea { font-family: "Roboto", Arial, sans-serif; }
+.footer, .header { font-family: "Roboto", Arial, sans-serif; }
+
+
+/* Basics
+======================================================================*/
+a { text-decoration: none; transition: all 0.1s ease-in-out; }
+a:hover { text-decoration: none !important; }
+audio { margin-bottom: 1em; width: 100%; }
+address { font-style: normal; }
+blockquote { margin-left: 3em; }
+body { line-height: 1.5; word-wrap: break-word; }
+cite, em { font-style: italic; }
+dl, ol, table, p, ul { margin-bottom: 1em; }
+dt { margin-top: 0.75em; }
+dt:first-child { margin: 0; }
+dt, h2, h3, h4, h5, h6, strong { font-weight: bold; }
+h1 { font-size: 2.25rem; font-weight: 600; letter-spacing: -0.02em; line-height: 1.2; margin-bottom: 0.5em; }
+h2 { font-size: 1.375rem; font-weight: 500; line-height: 1.1; margin-bottom: 0.6em; }
+h2 span { font-size: 12px; }
+h3 { font-size: 1.1rem; }
+h4 { text-transform: uppercase; }
+hr { background: #e0dbd4; border: 0; clear: both; color: #e0dbd4; height: 1px; margin: 2em 0; }
+img { max-width: 100%; }
+li { margin-bottom: 0.375em; }
+ol, ul { margin-top: 0.5em; }
+ol, ol ol ol ol { list-style-type: decimal; margin-left: 2em; }
+ol ol, ol ol ol ol ol { list-style-type: lower-alpha; }
+ol ol ol { list-style-type: lower-roman; }
+ol ol, ol ul, ul ol, ul ul { margin-top: 0.4em; }
+sub { vertical-align: sub; }
+sub, sup { font-size: 0.7em; white-space: nowrap; }
+sup { vertical-align: super; }
+table { border-collapse: collapse; width: 100%; }
+table[style] { width: 100% !important; }
+table p { margin: 0; }
+td { vertical-align: top; }
+td[align="right"] { text-align: right; }
+td[align="center"] { text-align: center; }
+td, th { border: 1px solid #ddd; padding: 0.3em 0.5em; }
+tfoot td { border-top: 3px double #ddd; }
+th { background: #f0f0f0; font-weight: bold; vertical-align: bottom; }
+ul { list-style: disc; margin-left: 1.5em; }
+ul li::marker { color: #418fde; }
+ul ul { list-style: circle; }
+video { height: auto !important; width: 100% !important; }
+
+/* Stock classes */
+.c { text-align: center; }
+.l { float: left; }
+.r { float: right; }
+ul.flat { list-style: none; margin-left: 0; }
+ul.flat > li { background: none; margin: 0; padding: 0; }
+
+
+/* Core layout
+======================================================================*/
+.clear { clear: both; }
+.content { margin: 0 auto; max-width: 1210px; }
+.content-narrow { margin: 0 auto; max-width: 960px; }
+.main-content { padding: 4vw 30px; }
+
+.landing main {
+    height: 100vh;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Content
+======================================================================*/
+
+/* Landing logo */
+#landing-logo img {
+    display: block;
+    height: 100px;
+    margin: 32px auto;
+}
+
+
+/* Landing tools */
+.tools {
+
+}
+
+.tools .col {
+    margin: 24px 12px;
+}
+
+    .tools .tile-bg {
+        position: absolute;
+        overflow: hidden;
+        z-index: -10;
+        color: #2e2e2e;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    .tools .tile-bg p {
+        font-size: 185px;
+        line-height: 0;
+        margin-right: 0.125em;
+        margin-top: 0.1em;
+        text-align: right;
+    }
+
+    /* Tool tile */
+    .tool-tile {
+        /* background-image: linear-gradient(to bottom right, #444444, #363636); */
+        background-image: linear-gradient(to bottom right, rgba(0,0,0,0.1), rgba(0,0,0,0.275));
+        border-radius: 4px;
+        box-shadow: 4px 4px 12px rgba(0,0,0,0.2);
+        display: block;
+        overflow: hidden;
+        padding: 2.5em 1.5em;
+        position: relative;
+        text-align: center;
+    }
+
+    .tools-more {
+        margin-top: 48px;
+    }
+
+
+
+
+
+/* Widths
+=====================================================================*/
+@media screen and (max-width: 1000px) {
+    
+}
+
+@media screen and (max-width: 900px) {
+    /* Layout */
+    .main { padding-top: 58px; }
+    .main-content { padding: 30px 15px 20px; }
+    
+    /* Content */        
+}
+
+@media screen and (max-width: 500px) {
+    
+}

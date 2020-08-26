@@ -1,0 +1,181 @@
+/* Site notifications */
+.site-notifications-wrapper { 
+    height: 0; 
+    left: 0; 
+    position: fixed; 
+    text-align: center; 
+    top: 0; 
+    width: 100%; 
+    z-index: 10000; 
+}
+.site-notifications { padding: 0 10px; }
+.site-notifications .alert { 
+    box-shadow: 0 4px 8px rgba(0,0,0,.1);
+    -webkit-box-shadow: 0 4px 8px rgba(0,0,0,.1);
+    border-width: 2px; 
+    cursor: pointer; 
+    display: inline-block; 
+    margin-bottom: 5px; 
+    margin-top: 5px;
+    padding: 8px 12px;
+}
+
+.site-notifications .alert.target { margin: 0; position: absolute; }
+
+    /* position and arrows*/
+    .site-notifications .alert.top-left { transform: translateY(calc(-100% - 8px)); -webkit-transform: translateY(calc(-100% - 8px)); }
+    .site-notifications .alert.top-left::after { 
+        content: '';
+        position: absolute;
+        left: 0%;
+        top: 100%;
+        width: 0;
+        height: 0;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-top: 8px solid;
+        border-top-color: inherit;
+    }
+    .site-notifications .alert.top { transform: translate(-50%, calc(-100% - 8px)); -webkit-transform: translate(-50%, calc(-100% - 8px)); }
+    .site-notifications .alert.top::after { 
+        content: '';
+        position: absolute;
+        left: calc(50% - 8px);
+        top: 100%;
+        width: 0;
+        height: 0;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-top: 8px solid;
+        border-top-color: inherit;
+    }
+    .site-notifications .alert.top-right { transform: translate(-100%, calc(-100% - 8px)); -webkit-transform: translate(-100%, calc(-100% - 8px)); }
+    .site-notifications .alert.top-right::after { 
+        content: '';
+        position: absolute;
+        left: calc(100% - 16px);
+        top: 100%;
+        width: 0;
+        height: 0;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-top: 8px solid;
+        border-top-color: inherit;
+    }
+    .site-notifications .alert.right-top { transform: translateX(8px); -webkit-transform: translateX(8px); }
+    .site-notifications .alert.right-top::after { 
+        content: '';
+        position: absolute;
+        left: -8px;
+        top: 0%;
+        width: 0;
+        height: 0;
+        border-bottom: 8px solid transparent;
+        border-top: 8px solid transparent;
+        border-right: 8px solid;
+        border-right-color: inherit;
+    }
+    .site-notifications .alert.right { transform: translate(8px, -50%); -webkit-transform: translate(8px, -50%); }
+    .site-notifications .alert.right::after { 
+        content: '';
+        position: absolute;
+        left: -8px;
+        top: calc(50% - 8px);
+        width: 0;
+        height: 0;
+        border-bottom: 8px solid transparent;
+        border-top: 8px solid transparent;
+        border-right: 8px solid;
+        border-right-color: inherit;
+    }
+    .site-notifications .alert.right-bottom { transform: translate(8px, -100%); -webkit-transform: translate(8px, -100%); }
+    .site-notifications .alert.right-bottom::after { 
+        content: '';
+        position: absolute;
+        left: -8px;
+        top: calc(100% - 16px);
+        width: 0;
+        height: 0;
+        border-bottom: 8px solid transparent;
+        border-top: 8px solid transparent;
+        border-right: 8px solid;
+        border-right-color: inherit;
+    }
+    .site-notifications .alert.bottom-right { transform: translate(-100%, 8px); -webkit-transform: translate(-100%, 8px); }
+    .site-notifications .alert.bottom-right::after { 
+        content: '';
+        position: absolute;
+        left: calc(100% - 16px);
+        top: -8px;
+        width: 0;
+        height: 0;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-bottom: 8px solid;
+        border-bottom-color: inherit;
+    }
+    .site-notifications .alert.bottom { transform: translate(-50%, 8px); -webkit-transform: translate(-50%, 8px); }
+    .site-notifications .alert.bottom::after { 
+        content: '';
+        position: absolute;
+        left: calc(50% - 8px);
+        top: -8px;
+        width: 0;
+        height: 0;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-bottom: 8px solid;
+        border-bottom-color: inherit;
+    }
+    .site-notifications .alert.bottom-left { transform: translateY(8px); -webkit-transform: translateY(8px); }
+    .site-notifications .alert.bottom-left::after { 
+        content: '';
+        position: absolute;
+        left: 0;
+        top: -8px;
+        width: 0;
+        height: 0;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-bottom: 8px solid;
+        border-bottom-color: inherit;
+    }
+    .site-notifications .alert.left-bottom { transform: translate(calc(-100% - 8px), -100%); -webkit-transform: translate(calc(-100% - 8px), -100%); }
+    .site-notifications .alert.left-bottom::after { 
+        content: '';
+        position: absolute;
+        left: 100%;
+        top: calc(100% - 16px);
+        width: 0;
+        height: 0;
+        border-bottom: 8px solid transparent;
+        border-top: 8px solid transparent;
+        border-left: 8px solid;
+        border-left-color: inherit;
+    }
+    .site-notifications .alert.left { transform: translate(calc(-100% - 8px), -50%); -webkit-transform: translate(calc(-100% - 8px), -50%); }
+    .site-notifications .alert.left::after { 
+        content: '';
+        position: absolute;
+        left: 100%;
+        top: calc(50% - 8px);
+        width: 0;
+        height: 0;
+        border-bottom: 8px solid transparent;
+        border-top: 8px solid transparent;
+        border-left: 8px solid;
+        border-left-color: inherit;
+    }
+    .site-notifications .alert.left-top { transform: translateX(calc(-100% - 8px)); -webkit-transform: translateX(calc(-100% - 8px)); }
+    .site-notifications .alert.left-top::after { 
+        content: '';
+        position: absolute;
+        left: 100%;
+        top: 0;
+        width: 0;
+        height: 0;
+        border-bottom: 8px solid transparent;
+        border-top: 8px solid transparent;
+        border-left: 8px solid;
+        border-left-color: inherit;
+    }

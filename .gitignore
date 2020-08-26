@@ -1,0 +1,32 @@
+# General ignores
+
+[Oo]bj
+[Pp]ackages
+.nuget/*
+*.[Oo]rig
+*.user
+*.suo
+*.[Cc]ache
+*.bak
+*.ncb
+*.log 
+*.DS_Store
+*.pdb
+*.vs/*
+[Tt]humbs.db 
+_ReSharper.*
+*.resharper
+**/App_Data/**
+
+# Specific project ignores
+
+**/[Bb]in/**
+**/logs/**
+**/node_modules/**
+**/.next/**
+**/[Tt]mp
+**/_/**
+
+# Include specific files
+
+# syntax: regexp

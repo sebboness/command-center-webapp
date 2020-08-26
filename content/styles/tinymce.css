@@ -1,0 +1,8 @@
+/*----------------------------------------------+
+ | Part: Reset master styles within TinyMCE     |
+ +---------------------------------------------*/
+
+/* Basics
+======================================================================*/
+html { background: #fff; border: 0; font-size: 18px !important; }
+body { background: #fff; background-image: none; }
