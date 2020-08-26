@@ -25,55 +25,87 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="//stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
-<body class="landing dark">
+<body class="">
 
-<nav id="sidebar">
-    <div class="sidebar-header">
-        <a href="/content/templates/index.html">
-            <img src="/content/images/logo.svg" />
-        </a>
-    </div>
+    <main class="main">
 
-    <ul class="list-unstyled">
-        <li>
-            <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle collapsed">
-                <span class="icon">
-                    <i class="fal fa-id-card"></i>
-                </span>
-                MDS Manager
-            </a>
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper" class="content-column">
+            <!-- Logo -->
+            <div class="logo">
+                <a href="/content/templates/index.html">
+                    <img src="/content/images/logo.svg" />
+                </a>
+            </div>
+            
+            <!-- Menu -->
+            <div class="sidebar-nav bottom" id="sidebar">
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="#">
+                            <span class="icon">
+                                <i class="fal fa-id-card"></i>
+                            </span>
+                            MDS Manager
+                        </a>
+                    </li>
+                    <!-- <li>
+                        <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle collapsed">
+                            <span class="icon">
+                                <i class="fal fa-id-card"></i>
+                            </span>
+                            MDS Manager
+                        </a>
+            
+                        <ul class="collapse list-unstyled" id="homeSubmenu">
+                            <li><a href="#">Datasets</a></li>
+                            <li><a href="#">Image sourcing</a></li>
+                        </ul>
+                    </li> -->
+                    <li>
+                        <a href="#">
+                            <span class="icon">
+                                <i class="fal fa-clipboard-list-check"></i>
+                            </span>
+                            CoreData Validator
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon">
+                                <i class="fab fa-github"></i>
+                            </span>
+                            GIT Branches
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon">
+                                <i class="far fa-cog"></i>
+                            </span>
+                            Settings
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
 
-            <ul class="collapse list-unstyled" id="homeSubmenu">
-                <li><a href="#">Datasets</a></li>
-                <li><a href="#">Image sourcing</a></li>
-            </ul>
-        </li>
-        <li>
-            <a href="#">
-                <span class="icon">
-                    <i class="fal fa-clipboard-list-check"></i>
-                </span>
-                CoreData Validator
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                <span class="icon">
-                    <i class="fab fa-github"></i>
-                </span>
-                GIT Branches
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                <span class="icon">
-                    <i class="far fa-cog"></i>
-                </span>
-                Settings
-            </a>
-        </li>
-    </ul>
-</nav>
+        <!-- Content -->
+        <div id="content-wrapper" class="content-column">
+            <!-- Header -->
+            <div id="header">
+                <p>
+                Header
+                </p>
+            </div>
+            <div class="bottom content">
+                <p>
+                Test
+                </p>
+            </div>
+        </div>
+    
+    </main>
 
 </body>
 </html>

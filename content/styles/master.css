@@ -20,6 +20,7 @@ body, input, select, textarea { font-family: "Roboto", Arial, sans-serif; }
 
 /* Basics
 ======================================================================*/
+html { height: 100%; }
 a { text-decoration: none; transition: all 0.1s ease-in-out; }
 a:hover { text-decoration: none !important; }
 audio { margin-bottom: 1em; width: 100%; }
@@ -85,6 +86,49 @@ ul.flat > li { background: none; margin: 0; padding: 0; }
     align-items: center;
 }
 
+body:not(.landing) {
+    height: 100%;
+}
+
+.main {
+    height: 100%;
+    overflow: hidden;
+    margin: 0px;
+    display: flex;
+    box-sizing: border-box;
+}
+
+.content-column {
+    height: 100%;  
+    display: flex;
+    flex-direction: column;  
+}
+
+#sidebar-wrapper {
+    background-image: linear-gradient(to bottom right, rgba(0,0,0,0.1), rgba(0,0,0,0.275));
+    flex-shrink: 0;  
+    width: 300px;
+}
+
+#content-wrapper {
+  width: 100%;
+}
+
+.logo {
+    flex-shrink: 0;
+    margin: 32px 16px;
+}
+
+#header {
+    flex-shrink: 0;
+    display: inline-flex;
+}
+
+.bottom {
+    flex-grow: 1;  
+    overflow-y: auto;  
+}
+
 
 /* Content
 ======================================================================*/
@@ -144,12 +188,6 @@ ul.flat > li { background: none; margin: 0; padding: 0; }
 
 
 #sidebar {
-    background-image: linear-gradient(to bottom right, rgba(0,0,0,0.1), rgba(0,0,0,0.275));
-    z-index: 999;
-    position: fixed;
-    width: 250px;
-    height: 100%;
-    left: 0px;
     overflow-y: auto;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
