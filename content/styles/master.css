@@ -357,7 +357,8 @@ body {
 }
 
 .card-container:hover{
-    background-color: rgba(0,0,0,.25);
+    background-color: rgba(255,255,255,.15);
+    box-shadow: rgba(0,0,0,0.50) 0px 6px 8px;
 }
 
 .card-container p {
@@ -412,4 +413,32 @@ body {
 
 .button-cta img {
     margin-top: -.50rem;
+}
+
+.search-field-landing {
+    background-color: #353535;
+    color: white;
+    width: 36vw;
+    margin-top: 2rem;
+    border-radius: .25rem;
+    padding: 0.30rem;
+}
+
+.search-field-landing :focus {
+    outline: none;
+    caret-color: white;
+}
+
+
+.search-field-input {
+    border: none;
+    background-color: rgba(0,0,0,0);
+    width: 90%;
+    outline: none;
+    color: white;
+
+}
+
+.search-field-icon {
+    padding-left: 0.5rem;
 }
