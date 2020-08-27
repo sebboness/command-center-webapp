@@ -51,14 +51,6 @@
             <!-- Menu -->
             <div class="sidebar-nav bottom" id="sidebar">
                 <ul class="list-unstyled">
-                    <li>
-                        <a href="#">
-                            <span class="icon">
-                                <i class="fal fa-id-card"></i>
-                            </span>
-                            MDS Manager
-                        </a>
-                    </li>
                     <!-- <li>
                         <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle collapsed">
                             <span class="icon">
@@ -72,7 +64,15 @@
                             <li><a href="#">Image sourcing</a></li>
                         </ul>
                     </li> -->
-                    <li>
+                    <li class="active mds-color">
+                        <a href="#">
+                            <span class="icon">
+                                <i class="fal fa-id-card"></i>
+                            </span>
+                            MDS Manager
+                        </a>
+                    </li>
+                    <li class="core-data-color">
                         <a href="#">
                             <span class="icon">
                                 <i class="fal fa-clipboard-list-check"></i>
@@ -80,7 +80,7 @@
                             CoreData Validator
                         </a>
                     </li>
-                    <li>
+                    <li class="git-color">
                         <a href="#">
                             <span class="icon">
                                 <i class="fab fa-github"></i>
@@ -88,7 +88,7 @@
                             GIT Branches
                         </a>
                     </li>
-                    <li>
+                    <li class="settings-color">
                         <a href="#">
                             <span class="icon">
                                 <i class="far fa-cog"></i>
@@ -104,10 +104,27 @@
         <div id="content-wrapper" class="content-column">
             <!-- Header -->
             <div id="header">
-                
+                <div class="container-fluid">
+                    <section class="row">
+                        <div class="col-md-8">
+                            <h1>MDS Manager</h1>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="btn-toolbar float-right" role="toolbar" aria-label="Actions">        
+                                <div class="btn-group" role="group" aria-label="">
+                                    <button id="accountDropdown" type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Sebastian Stefaniuk
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="accountDropdown">
+                                        <a class="dropdown-item" href="#">Logout</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
             </div>
-            <div class="bottom container-fluid">
-                <h1>MDS Manager</h1>
+            <div class="bottom container-fluid" id="content">
 
                 <!-- MDS Actions -->
                 <div class="table-actions">

@@ -12,6 +12,13 @@
 @import url(/content/styles/select2.b4.css);
 /* @import url(/content/styles/forms.css); */
 
+:root {
+    --cc-blue: #37c1f0;
+    --cc-green: #4ab848;
+    --cc-orange: #fcae16;
+    --cc-yellow: #e7e514;
+}
+
 
 /* Fonts
 ======================================================================*/
@@ -112,8 +119,11 @@ body:not(.landing) {
 }
 
 #content-wrapper {
-    margin: 32px;
     width: 100%;
+}
+
+#content {
+    padding: 24px 32px 8px 32px;
 }
 
 .logo {
@@ -122,8 +132,10 @@ body:not(.landing) {
 }
 
 #header {
+    background-image: linear-gradient(to bottom right, rgba(0,0,0,0.25), rgba(0,0,0,0.1));
     flex-shrink: 0;
     display: inline-flex;
+    padding: 24px 32px 8px 32px;
 }
 
 .bottom {
@@ -229,6 +241,55 @@ body:not(.landing) {
 #sidebar ul li a:hover .icon {
     color: #ddd;
 }
+
+    /* Menu custom colors */
+        /* MDS */
+        #sidebar ul li.mds-color a {
+            color: var(--cc-green);
+        }
+
+        #sidebar ul li.mds-color a:hover, #sidebar ul li.mds-color.active a {
+            color: #eee;
+            background: var(--cc-green);
+        }
+
+        #sidebar ul li.mds-color.active a .icon {
+            color: #eee;
+        }
+        
+        /* CoreData */
+        #sidebar ul li.core-data-color a {
+            color: var(--cc-orange);
+        }
+
+        #sidebar ul li.core-data-color a:hover {
+            color: #eee;
+            background: var(--cc-orange);
+        }
+        
+        /* Git */
+        #sidebar ul li.git-color a {
+            color: var(--cc-blue);
+        }
+
+        #sidebar ul li.git-color a:hover {
+            color: #eee;
+            background: var(--cc-blue);
+        }
+        
+        /* Settings */
+        #sidebar ul li.settings-color a {
+            color: var(--cc-yellow);
+        }
+
+        #sidebar ul li.settings-color a:hover {
+            color: #333;
+            background: var(--cc-yellow);
+        }
+
+        #sidebar ul li.settings-color a:hover .icon {
+            color: #555;
+        }
 
 #sidebar ul ul a {
     font-size: 16px !important;
@@ -377,19 +438,19 @@ body {
 }
 
 #mds h2 {
-    color: #4ab848;
+    color: var(--cc-green);
 }
 
 #core-data h2 {
-    color: #fcae16;
+    color: var(--cc-orange);
 }
 
 #git h2 {
-    color: #37c1f0;
+    color: var(--cc-blue);
 }
 
 #settings h2 {
-    color: #e7e514;
+    color: var(--cc-yellow);
 }
 
 .button-cta {
