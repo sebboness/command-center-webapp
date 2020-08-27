@@ -6,10 +6,11 @@
 =====================================================================*/
 @import url(//fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap);
 @import url(/content/styles/fontawesome.css);
-@import url(/content/styles/reset.css);
+/* @import url(/content/styles/reset.css); */
 /* @import url(//stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css); */
 @import url(/content/styles/bootstrap.css);
-@import url(/content/styles/forms.css);
+@import url(/content/styles/select2.b4.css);
+/* @import url(/content/styles/forms.css); */
 
 
 /* Fonts
@@ -48,7 +49,7 @@ ol ol, ol ul, ul ol, ul ul { margin-top: 0em; }
 sub { vertical-align: sub; }
 sub, sup { font-size: 0.7em; white-space: nowrap; }
 sup { vertical-align: super; }
-table { border-collapse: collapse; width: 100%; }
+/* table { border-collapse: collapse; width: 100%; }
 table[style] { width: 100% !important; }
 table p { margin: 0; }
 td { vertical-align: top; }
@@ -56,7 +57,7 @@ td[align="right"] { text-align: right; }
 td[align="center"] { text-align: center; }
 td, th { border: 1px solid #ddd; padding: 0.3em 0.5em; }
 tfoot td { border-top: 3px double #ddd; }
-th { background: #f0f0f0; font-weight: bold; vertical-align: bottom; }
+th { background: #f0f0f0; font-weight: bold; vertical-align: bottom; } */
 ul { list-style: disc; }
 ul li::marker { color: #418fde; }
 ul ul { list-style: circle; }
@@ -127,7 +128,8 @@ body:not(.landing) {
 
 .bottom {
     flex-grow: 1;  
-    overflow-y: auto;  
+    overflow-y: auto;
+    margin-bottom: 64px;
 }
 
 

@@ -1401,7 +1401,7 @@ pre {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #616161;
+  color: #b7c8cf;
   background-color: #333333;
   background-clip: padding-box;
   border: 1px solid #515151;
@@ -1417,7 +1417,7 @@ pre {
     color: transparent;
     text-shadow: 0 0 0 #616161; }
   .form-control:focus {
-    color: #616161;
+    color: #b7c8cf;
     background-color: #333333;
     border-color: #aee6f9;
     outline: 0;
