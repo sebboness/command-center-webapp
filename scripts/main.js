@@ -125,12 +125,14 @@ $(document).ready(function() {
             { 
                 data: "country",
                 searchable: true,
-                targets: 2
+                targets: 2,
+                width: "80px"
             },
             { 
                 data: "region",
                 searchable: true,
                 targets: 3,
+                width: "80px",
                 render: function (data, type, row, meta) {
                     return data && data.length > 4 ? (data.substr(4)) : '';
                 }
@@ -138,7 +140,8 @@ $(document).ready(function() {
             { 
                 data: "docType",
                 searchable: true,
-                targets: 4
+                targets: 4,
+                width: "120px"
             },
             { 
                 data: "updatedOn",
@@ -152,8 +155,8 @@ $(document).ready(function() {
             { 
                 data: "status",
                 searchable: true,
-                targets: 6, 
-                width: "120px" 
+                targets: 6,
+                width: "120px"
             },
         ],
         dom: "<'row'<'col'i>>" +
