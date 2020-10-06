@@ -9,6 +9,7 @@ import * as A from "../../actions";
 import { AppState } from "../../store";
 import { SiteAlerts, SiteNotifications } from "../message";
 import { Responsive } from "../responsive";
+import { Sidebar } from "./Sidebar";
 
 const mapStateToProps = (state: AppState, ownProps: OwnProps | undefined): ConnectedState => ({
     ...Comp.Base.DefaultStatePropsMap(state, ownProps),
@@ -30,6 +31,7 @@ interface OwnState {
 }
 
 interface OwnProps {
+    isLanding?: boolean;
     preMainContent?: JSX.Element | JSX.Element[];
     title?: string;
 }
@@ -48,30 +50,56 @@ class LayoutComponent extends React.Component<CombinedProps, OwnState> {
     }
 
     public render() {
+
+        const isLanding = this.props.isLanding || false;
+
+        const sideBar = isLanding
+            ? null
+            : <Sidebar />;
+
         return <>
             <Responsive />
             <DocumentHead title={this.props.title} />
             <SiteNotifications />
 
-            <div id="mask" onClick={() => this.props.removeMaskedBodyClass()}></div>
+            {/* <div id="mask" onClick={() => this.props.removeMaskedBodyClass()}></div> */}
 
-            <MobileMenu />
+            {/* <MobileMenu /> */}
 
-            <Header />
+            <main className={isLanding ? "landing-body" : "main"}>
+                {isLanding
+                    ? this.props.children
+                    : <>
+                        {this.props.preMainContent || null}
 
-            <main className="main" data-swiftype-index="true">
-                {this.props.preMainContent || null}
+                        <Sidebar />
 
-                <div className="main-content">
-                    <div className="content">
-                        <SiteAlerts />
+                        <div id="content-wrapper" className="content-column">
 
-                        {this.props.children}
-                    </div>
-                </div>
+                            <Header title={this.props.title} />
+
+                            <div className="bottom container-fluid" id="content">
+                                <SiteAlerts />
+
+                            </div>                
+
+                            <Footer />
+
+                        </div>
+
+
+
+                        {/* <div className="main-content">
+                            <div className="content">
+                                <SiteAlerts />
+
+                                {this.props.children}
+                            </div>
+                        </div>                        
+
+                        <Footer /> */}
+                    </>}
             </main>
-
-            <Footer />
         </>;
     }
 }

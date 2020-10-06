@@ -7,7 +7,6 @@ import "react-placeholder/lib/reactPlaceholder.css";
 import "../../content/styles/master.css";
 import "../../content/styles/site-notifications.css";
 
-import { List } from "immutable";
 import withRedux from "next-redux-wrapper";
 import { AppComponentProps, Container, DefaultAppIProps, NextAppContext } from "next/app";
 import Router from "next/router";

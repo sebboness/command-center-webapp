@@ -24,6 +24,7 @@ const mapDispatchToProps = (dispatch: redux.Dispatch<AppState>): ConnectedDispat
 });
 
 interface OwnProps {
+    title?: string | JSX.Element;
 }
 
 type ConnectedState = Comp.Base.DefaultConnectedState & {
@@ -48,97 +49,32 @@ class HeaderComponent extends React.Component<CombinedProps, OwnState> {
     }
 
     public render() {
-        const auth: any = {}; // this.props.tokenData;
-
-        return <header className="header">
-            <div className="content">
-                <div className="header-primary">
-                    <div className="header-subbranding">
-                        A project from the{" "}
-                        <a href=""></a>
+        return <div id="header">
+            <div className="container-fluid">
+                <section className="row">
+                    <div className="col-md-8">
+                        
+                        {this.props.title
+                            ? (typeof this.props.title === "string"
+                                ? <h1 dangerouslySetInnerHTML={{ __html: this.props.title }} />
+                                : <h1>{this.props.title}</h1>)
+                            : null}
                     </div>
-
-                    <Link href="/">
-                        <a className="header-logo">
-                            <img alt={Settings.ClientName} src="/content/images/logo.svg" />
-                            <span className="header-tagline">Connecting the world</span>
-                        </a>
-                    </Link>
-                </div>
-
-                <nav className="nav-header">
-                    <ul className="nav-extra">
-                        <li>
-                            <Comp.Bug.Report linkText="Share feedback" />
-                        </li>
-                        <li className="account-nav">
-                            {auth.hasUserRecord
-                                ? <>
-                                    Welcome,{" "}
-                                    <Link href=""><a>{auth.userFirstName}</a></Link>
-                                    &nbsp;&nbsp;&nbsp;
-                                    <Link href={Paths.Logout}><a>Sign out</a></Link>
-                                </>
-                                : <a href={Paths.Login} onClick={(e) => this.onSignInClick(e)}>Sign in</a>}
-                        </li>
-                    </ul>
-
-                    {this.props.isHomePage
-                        ? null
-                        : <>
-                            {/* <ul className="nav-primary">
-                                <li>
-                                    <routes.Link route={routes.Topics}><a>Topics</a></routes.Link>
-                                </li>
-                            </ul> */}
-                            <div className="site-search">
-                                <SiteSearch id="header-search" />
+                    <div className="col-md-4">
+                        <div className="btn-toolbar float-right" role="toolbar" aria-label="Actions">        
+                            <div className="btn-group" role="group" aria-label="">
+                                <button id="accountDropdown" type="button" className="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Sebastian Stefaniuk
+                                </button>
+                                <div className="dropdown-menu" aria-labelledby="accountDropdown">
+                                    <a className="dropdown-item" href="#">Logout</a>
+                                </div>
                             </div>
-                        </>}
-
-                    {/* <ul className="nav-primary">
-                        <li>
-                            <routes.Link route={routes.Topics}><a>Topics</a></routes.Link>
-                        </li>
-                    </ul>
-                    <div className="site-search">
-                        <SiteSearch api={this.props.api} id="header-search" />
-                    </div> */}
-                    <nav id="nav-toggle">
-                        <ul>
-                            <li>
-                                <a href="#" id="toggle-menu" onClick={(e) => { ReactHelper.emptyClick(e); this.props.addBodyClass(["masked", "menu-open"]); }}>
-                                    <Icon c="s" icon="bars" />
-                                </a>
-                            </li>
-
-                            {this.props.isHomePage
-                                ? null
-                                : <li>
-                                    <a href="#" id="toggle-search" onClick={(e) => { ReactHelper.emptyClick(e); this.props.addBodyClass(["masked", "search-open"]); }}>
-                                        <Icon c="s" icon="search" />
-                                    </a>
-                                </li>}
-
-                            {/* <li>
-                                <a href="#" id="toggle-search" onClick={(e) => { ReactHelper.emptyClick(e); this.props.addBodyClass(["masked", "search-open"]); }}>
-                                    <Icon c="s" icon="search" />
-                                </a>
-                            </li> */}
-                        </ul>
-                    </nav>
-                </nav>
+                        </div>
+                    </div>
+                </section>
             </div>
-        </header>;
-    }
-
-    private onSignInClick(e: React.MouseEvent<HTMLAnchorElement>) {
-        const currentPath = Router.asPath || "/";
-        const loginPath = Paths.Login;
-        if (!(currentPath === loginPath || currentPath.indexOf(`${loginPath}?`) === 0)) {
-            Router.push(`${loginPath}?returnUrl=${encodeURIComponent(Router.asPath || "/")}`);
-        }
-        return ReactHelper.emptyClick(e);
+        </div>;
     }
 }
 
